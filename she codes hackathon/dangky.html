@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Dăng ký</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        
+        header{
+            background-color: #FFE16C;
+            min-height: 40px;
+            padding: 5px;
+        }
+        body{
+            background-color: #C9EAFF;
+        }
+        .container{
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        main{
+            background-color: #C9EAFF;
+            width: 100%;
+        }
+        footer{
+            background-color: #FFE16C;
+            min-height: 20px;
+        }
+
+        h1{
+            color: #F78888;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 35px;
+            line-height: 65px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .register-form{
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 15px;
+        }
+
+        .input-box{
+            margin-bottom: 30px;
+        }
+        .input-box input{
+            padding: 10px 20px;
+            width: 100%;
+            border: 1px solid #ffffff;
+            border-radius: 30px;
+        }
+        .input-box input:hover{
+            border: 1px solid #fcc900
+        }
+        
+        #row3{
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            border: 1px solid #ffffff;
+            border-radius: 30px;
+            float: right;
+        }
+
+        #row3:hover{
+            border: 1px solid #fcc900
+        }
+
+        button{
+            width: 40%;
+            padding: 10px 0px;
+            border-radius: 30px;
+            background-color: #FFE16C;
+            border: none;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        button:hover{
+            background-color: #fcc900
+        }
+        
+    </style>
+
+    <script type="text/javascript">
+ 
+        function clickend()  {
+
+             var result = confirm("Bạn không muốn tiếp tục");
+
+             if(result)  {
+                 alert("OK");
+             } else {
+                 alert("Tạm biệt");
+             }
+        }
+
+     </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="login.html">
+                <img style="width: 10%" src="img/Logo.jpg">
+            </a>
+            
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="register-form">
+                <form action="" method="post">
+                    <h1>ĐĂNG KÍ TÀI KHOẢN</h1>
+                    <div class="input-box">
+                        <input type="text" placeholder="Đặt tên tài khoản người dùng">
+                    </div>
+                    <div class="input-box">
+
+                        <input type="text" placeholder="Nhập Email">
+                    </div>
+
+                    <div>
+                        <button>Gửi mã xác nhận</button>
+                        <input id="row3" type="text" placeholder="Nhập mã">
+                    </div>
+    
+                    <div class="input-box">
+                        <i ></i>
+                        <input type="password" placeholder="Đặt mật khẩu">
+                    </div>
+    
+                    <div class="input-box">
+                        <i ></i>
+                        <input type="password" placeholder="Nhập lại mật khẩu">
+                    </div>
+
+                    <div>
+                        <button style="width:20%" onclick="clickend()"><a style="text-decoration: none; color: black" href="login.html">Trở về</a></button>
+                        <button style="width:20%; float:right"><a style="text-decoration: none; color: black" href="Quytac.html">Đăng ký</button></a></button>   
+                    </div>
+        
+    </main>
+    <footer>
+        <div class="container">
+        </div>
+    </footer>
+    
+</body>
+</html>

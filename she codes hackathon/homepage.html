@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Trang Chủ</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #C9EAFF;
+        }
+        
+        header{
+            display: block;
+            background-color: #FFE16C;
+            min-height: 20px;
+            padding: 5px;
+        }
+
+        main{
+            background-color: #C9EAFF;
+            min-height: 280px;
+            padding: 10px 10px;
+            display: block;
+        }
+        footer{
+            background-color: #FFE16C;
+            min-height: 30px;
+            margin-top: 310px;
+        }
+        .container{
+            background-size: cover;
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        h1{
+            text-align: center; 
+            color: #F78888;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 55px;
+            font-style: bold;
+        }
+
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li{
+            width: 150px;
+            text-align: center; 
+        }
+        .menu > ul{
+            height: 40px;
+        }
+        .menu > ul > li{
+            color: #F78888;
+            display: inline-block;
+            position: relative;
+        }
+        .menu > ul > li > ul {
+            display: none;
+            position: absolute;
+            padding: 7.5px 10px;
+            top: 29px;
+        }
+
+        .menu > ul > li > ul li{
+            padding: 5px 0;
+            background-color: #FFE16C;
+            color: #F78888;
+        }
+        ul li:last-child{
+            border: none;
+        }
+        .menu ul li:hover ul{
+            display: block;
+        }
+
+        .menu>ul>li:hover{
+            background-color: #fcc900;
+        }
+
+        .product {
+            text-align: center;
+            font-weight: bold;
+            font-size: 100%;
+            min-width: 250px;
+            min-height: 250px;
+            width: 100%;
+            margin: 10px 20px;
+            padding: 10px;
+            
+        }
+
+        .product img{
+            width: 100%;
+            border: 10px solid #F78888;
+            border-radius: 30px;
+        }
+
+        .product a{
+            text-decoration: none;
+            color: #F78888;
+        }
+
+        iframe{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            border: 10px solid #F78888;
+            border-radius: 30px;
+        }
+
+        [class*='col-'] {
+            float: left;
+        }
+
+        .col-xl-1 { width: 8.33% }
+        .col-xl-2 { width: 16.66% }
+        .col-xl-3 { width: 25% }
+        .col-xl-4 { width: 33.33% }
+        .col-xl-5 { width: 41.66% }
+        .col-xl-6 { width: 50% }
+        .col-xl-7 { width: 58.33% }
+        .col-xl-8 { width: 66.66% }
+        .col-xl-9 { width: 75% }
+        .col-xl-10 { width: 83.33% }
+        .col-xl-11 { width: 91.66% }
+        .col-xl-12 { width: 100% }
+
+        @media screen and (max-width: 1200px) {
+            .col-lg-1 { width: 8.33% }
+            .col-lg-2 { width: 16.66% }
+            .col-lg-3 { width: 25% }
+            .col-lg-4 { width: 33.33% }
+            .col-lg-5 { width: 41.66% }
+            .col-lg-6 { width: 50% }
+            .col-lg-7 { width: 58.33% }
+            .col-lg-8 { width: 66.66% }
+            .col-lg-9 { width: 75% }
+            .col-lg-10 { width: 83.33% }
+            .col-lg-11 { width: 91.66% }
+            .col-lg-12 { width: 100% }
+        }
+
+        @media screen and (max-width: 992px) {
+            .col-md-1 { width: 8.33% }
+            .col-md-2 { width: 16.66% }
+            .col-md-3 { width: 25% }
+            .col-md-4 { width: 33.33% }
+            .col-md-5 { width: 41.66% }
+            .col-md-6 { width: 50% }
+            .col-md-7 { width: 58.33% }
+            .col-md-8 { width: 66.66% }
+            .col-md-9 { width: 75% }
+            .col-md-10 { width: 83.33% }
+            .col-md-11 { width: 91.66% }
+            .col-md-12 { width: 100% }
+        }
+
+        @media screen and (max-width: 768px) {
+            .col-sm-1 { width: 8.33% }
+            .col-sm-2 { width: 16.66% }
+            .col-sm-3 { width: 25% }
+            .col-sm-4 { width: 33.33% }
+            .col-sm-5 { width: 41.66% }
+            .col-sm-6 { width: 50% }
+            .col-sm-7 { width: 58.33% }
+            .col-sm-8 { width: 66.66% }
+            .col-sm-9 { width: 75% }
+            .col-sm-10 { width: 83.33% }
+            .col-sm-11 { width: 91.66% }
+            .col-sm-12 { width: 100% }
+        }
+
+        @media screen and (max-width: 576px) { 
+            [class*='col-'] {
+                width: 100%;
+            }
+        }
+
+        a{text-decoration: none; color: #F78888;}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container"> 
+            <div class="menu">
+                <ul>
+                    <li>   
+                        <a href="homepage.html">
+                            <img style="width: 80%; float:left" src="img/Logo.jpg">
+
+                        </a>
+                        
+                    </li>
+
+                    <li>
+                        <a style="text-decoration: none; color:#F78888" href="congdong.html" class="main" style="float: right"><img style="width:20px" src="img/Community_icon.png"> Cộng đồng</a>
+                    </li>
+
+                    <li>
+                        <a class="main" style="float: right" href="Dangkytuvan.html"><img style="width:20px" src="img/Ask_for_help.png"> Nhận tư vấn</a>
+                    </li>
+
+                    <li>
+                        <a class="main" style="float: right"><img style="width:20px" src="img/Noti_icon.png">Thông báo </a>
+                    </li>                    
+
+                    <li>
+                        <a class="main" style="float: right"><img style="width:20px;" src="img/Settings_icon.png"> Cài đặt 
+                            <ul>
+                                <li><a>Đăng nhập</a></li>
+                                <li><a style ="text-decoration: none; color:#F78888" href="login.html">Đăng xuất</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <iframe width="660" height="395" src="https://www.youtube.com/embed/A8ngyTaa-8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h1>CHILDREN’S MENTAL CARE</h1>
+            <div class="news">
+                <div class="product col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="https://tamlyvietphap.vn/lam-cha-me/%E2%80%8Bphong-cach-lam-cha-me-on-hoa-peaceful-parenting-2461-49911-article.html">
+                        <img src="img/newpp1.jpg">
+                        <h2>Thế nào làm cha mẹ ôn hòa?</h2>
+                        <p></p>
+                    </a>
+                </div>
+                    
+                <div class="product col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="https://www.unicef.org/vietnam/vi/nh%E1%BB%AFng-c%C3%A2u-chuy%E1%BB%87n/c%C3%A1ch-ch%C4%83m-s%C3%B3c-s%E1%BB%A9c-kh%E1%BB%8Fe-t%C3%A2m-l%C3%BD-x%C3%A3-h%E1%BB%99i-c%E1%BB%A7a-con-b%E1%BA%A1n-trong-th%E1%BB%9Di-c%C3%A1ch-ly-x%C3%A3-h%E1%BB%99i-t%E1%BA%A1i-nh%C3%A0">
+                        <img src="img/news2.jpg">
+                        <h2>Cha mẹ/ người chăm sóc trẻ cần biết sức khỏe tâm thần và tâm lý xã hội cho con mình</h2>
+                    </a>
+                </div>
+                    
+                <div class="product col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="https://www.unicef.org/vietnam/vi/nh%E1%BB%AFng-c%C3%A2u-chuy%E1%BB%87n/c%C3%A1ch-ch%C4%83m-s%C3%B3c-s%E1%BB%A9c-kh%E1%BB%8Fe-t%C3%A2m-l%C3%BD-x%C3%A3-h%E1%BB%99i-c%E1%BB%A7a-con-b%E1%BA%A1n-trong-th%E1%BB%9Di-c%C3%A1ch-ly-x%C3%A3-h%E1%BB%99i-t%E1%BA%A1i-nh%C3%A0">
+                        <img src="img/news3.jpg">
+                        <h2>Các giai đoạn phát triển tâm lý của trẻ từ 0 đến 16 tuổi</h2>
+                    </a>
+                </div>
+
+                <div class="product col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="https://www.unicef.org/vietnam/vi/nh%E1%BB%AFng-c%C3%A2u-chuy%E1%BB%87n/c%C3%A1ch-ch%C4%83m-s%C3%B3c-s%E1%BB%A9c-kh%E1%BB%8Fe-t%C3%A2m-l%C3%BD-x%C3%A3-h%E1%BB%99i-c%E1%BB%A7a-con-b%E1%BA%A1n-trong-th%E1%BB%9Di-c%C3%A1ch-ly-x%C3%A3-h%E1%BB%99i-t%E1%BA%A1i-nh%C3%A0">
+                        <img src="img/news4.jpg">
+                        <h2>Nuôi dạy con bằng phương pháp chánh niệm</h2>
+                    </a>
+                </div>
+        </div>
+
+        <div class="footer">
+
+        </div>
+            
+    </main>
+    
+    <footer>
+        <div class="container"></div>
+    </footer>
+</body>
+</html>
